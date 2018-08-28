@@ -8,8 +8,8 @@ public class HelloMicroservice extends AbstractVerticle {
     @Override
     public void start() {
         // Receive message from the address 'hello'
-//        retrieves the eventBus from the vertx object and registers
-//        a consumer on the address hello
+        //retrieves the eventBus from the vertx object and registers
+        // a consumer on the address hello
         vertx.eventBus().<String>consumer("hello", message -> {
             JsonObject json = new JsonObject()
                 .put("served-by", this.toString());
@@ -21,4 +21,5 @@ public class HelloMicroservice extends AbstractVerticle {
             }
         });
     }
+
 }

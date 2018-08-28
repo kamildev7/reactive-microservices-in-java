@@ -41,7 +41,7 @@ public class HelloConsumerMicroservice extends AbstractVerticle {
 
         Single
             .zip(single1, single2, (tim, ann) -> {
-                // We have the results of both requests in Time and Ann
+                // We have the results of both requests in Tim and Ann
                 return new JsonObject()
                     .put("Tim", tim.getString("message"))
                     .put("Ann", ann.getString("message"));

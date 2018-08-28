@@ -22,7 +22,7 @@ public class HelloConsumerMicroservice extends AbstractVerticle {
                     Single
                         .zip(obs1, obs2, (tim, ann) ->
                             new JsonObject()
-                                .put("Luke", tim.getString("message")
+                                .put("Tim", tim.getString("message")
                                     + " from " + tim.getString("served-by"))
                                 .put("Ann", ann.getString("message")
                                     + " from " + ann.getString("served-by"))
@@ -34,5 +34,4 @@ public class HelloConsumerMicroservice extends AbstractVerticle {
                 })
             .listen(8082);
     }
-
 }
